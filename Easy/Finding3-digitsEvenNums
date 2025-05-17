@@ -1,0 +1,17 @@
+def findEvenNumbers(digits):
+    """
+    :type digits: List[int]
+    :rtype: List[int]
+    """
+    my_set = set()
+    for i in range(len(digits)):
+        for j in range(len(digits)):
+            for m in range(len(digits)):
+                if j != i and j != m and m != i: 
+                    num = digits[i]*100 + digits[j]*10 + digits[m]
+                    if num >=100 and num %2 == 0:
+                        my_set.add(num)
+    return(sorted(list(my_set)))
+digits = [0,3,5,7,8]
+print(findEvenNumbers(digits))
+                    
