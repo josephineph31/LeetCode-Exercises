@@ -1,0 +1,10 @@
+def isPalindrome(x):
+    """
+    :type x: int
+    :rtype: bool
+    """
+    digits = list(str(x))
+    reverse = digits[::-1]
+    return digits == reverse
+x = 132
+print(isPalindrome(x))
